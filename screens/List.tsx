@@ -17,7 +17,7 @@ export default class List extends React.Component {
         this.setState({ data });
       })
 
-    
+      console.log(this.state.data)
   }
 
 
@@ -34,7 +34,7 @@ export default class List extends React.Component {
                   
                   <Text> {item.name} </Text>
                   <Text> {item.price} </Text>
-
+                  <Text> {item.amount} </Text>
                 </View>
               )}
               />
