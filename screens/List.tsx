@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View, TextInput, FlatList } from 'react-native';
+import {  StyleSheet, Text, View,  FlatList } from 'react-native';
 
 
 import ecommerce from '../api/ecommerce';
@@ -29,12 +28,13 @@ export default class List extends React.Component {
     
         <FlatList
               data={this.state.data}
+             
               renderItem={({ item }) => (
-                <View>
+                <View style={styles.list}>
                   
-                  <Text> {item.name} </Text>
-                  <Text> {item.price} </Text>
-                  <Text> {item.amount} </Text>
+                  <Text> Nome: {item.name} </Text>
+                  <Text> Preço: {item.price} </Text>
+                  <Text> Quantidade :{item.amount} </Text>
                 </View>
               )}
               />
@@ -55,5 +55,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: 150,
     height: 30
+  },
+  list:{
+    alignContent: 'center', 
+    marginTop: 50,
+    borderColor: '#000',
+    borderEndWidth: 0.5,
+    borderStartWidth:  0.5,
+    borderBottomWidth:  0.5,
+    borderTopWidth:  0.5,
   }
 });
