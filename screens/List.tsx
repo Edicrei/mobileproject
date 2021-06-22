@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View, TextInput, } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput, FlatList } from 'react-native';
 
 
 import ecommerce from '../api/ecommerce';
@@ -16,6 +16,8 @@ export default class List extends React.Component {
         const data = res.data;
         this.setState({ data });
       })
+
+    
   }
 
 
@@ -23,11 +25,20 @@ export default class List extends React.Component {
   render() {
   return (
     <View style={styles.container}> 
-   
-     <ul>
-        { this.state.data.map(person => 
-              <li>{person.name}</li>)}
-      </ul>
+
+    
+        <FlatList
+              data={this.state.data}
+              renderItem={({ item }) => (
+                <View>
+                  
+                  <Text> {item.name} </Text>
+                  <Text> {item.price} </Text>
+
+                </View>
+              )}
+              />
+    
     </View>
   );
   }
