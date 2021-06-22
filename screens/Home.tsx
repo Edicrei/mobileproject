@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { View, Button, Text, StyleSheet, Image} from "react-native";
 import { useNavigation } from '@react-navigation/core';
 
 export default function Home(){
@@ -8,7 +8,7 @@ export default function Home(){
 
   return (
     <View style={styles.center}>
-      <Text>Eccomerce </Text>
+       <Image style={styles.logo} source={require('../assets/logo.png')}/>
       <View    style={styles.button}>
       <Button
         title="Login"
@@ -41,6 +41,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: 150,
     height: 30
+  },
+  text:{
+    fontSize: 28,
+  },
+  logo: {
+    width: 100,
+    height: 100
   }
 });
 
