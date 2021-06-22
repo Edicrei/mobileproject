@@ -25,7 +25,7 @@ export default function Login (){
     .catch(function (error) {
       console.log(error);
     });
-    navigation.navigate('Login')
+    navigation.navigate('List')
   }
 
 
