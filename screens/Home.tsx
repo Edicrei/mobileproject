@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, Text, StyleSheet, Image} from "react-native";
+import { View, Button, StyleSheet, Image} from "react-native";
 import { useNavigation } from '@react-navigation/core';
 
 export default function Home(){
@@ -50,6 +50,4 @@ const styles = StyleSheet.create({
     height: 100
   }
 });
-
-
 
