@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet,  View,  } from 'react-native';
+import { Button, StyleSheet,  View, Alert  } from 'react-native';
 import axios  from 'axios'
 import InputTextField from '../components/InputTextField';
 
@@ -26,12 +26,15 @@ export default function Register() {
     })
     .then(function (response) {
       console.log(response);
+      navigation.navigate('Login')
     })
     .catch(function (error) {
       console.log(error);
+
+       Alert.alert('É permitido apenas maior de 18 anos !!')
     });
 
-    navigation.navigate('Login')
+    //
   }
 
   
