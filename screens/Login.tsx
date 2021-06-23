@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, StyleSheet, View} from 'react-native';
-import axios  from 'axios'
 import InputTextField from '../components/InputTextField/index';
 
 import ecommerce from '../api/ecommerce';
@@ -33,7 +32,7 @@ export default function Login (){
   return (
      <View style={styles.container}> 
          <InputTextField label="Email" value={login} onChange={setlogin} />     
-             <InputTextField label="Senha" value={password} onChange={setpassword} />
+             <InputTextField label="Senha" value={password} onChange={setpassword}  />
              <View    style={styles.button}>
               <Button
                 title="Login"
